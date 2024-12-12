@@ -1,8 +1,6 @@
-
-
 # Survey Tool
 
-This is a desktop application built using **Electron.js** and **Tailwind CSS** for creating and managing survey tools. This README provides instructions for teammates to set up, run, and contribute to the project.
+This is a desktop application built using **Electron.js** and **Tailwind CSS** for creating and managing survey tools. This README provides instructions to set up, run, and contribute to the project.
 
 ## Prerequisites
 
@@ -11,65 +9,49 @@ Before you begin, ensure you have the following installed on your system:
 - [Node.js](https://nodejs.org/) (LTS version recommended)
 - [Git](https://git-scm.com/)
 
-## How to Set Up the Project
+## How to Use This Repository
 
 1. **Clone the Repository**
+   Clone the repository to your local machine:
    ```bash
-   git clone git@github.com:your-username/survey_tool.git
+   git clone git@github.com:itskiranp/survey_tool.git
    ```
 
-2. **Navigate to the Project Directory**
+2. **Install Dependencies**
+   Navigate to the project directory and install all necessary packages:
    ```bash
    cd survey_tool
-   ```
-
-3. **Install Dependencies**
-   Run the following command to install all necessary packages:
-   ```bash
    npm install
    ```
 
-## How to Run the Project
-
-1. **Start the Electron App**
-   Run the following command to launch the app:
+3. **Run the Application**
+   Start the Electron app by running the following command:
    ```bash
    npm start
    ```
 
-2. **Tailwind CSS Build (Development)**
-   If you update any CSS, you need to rebuild the Tailwind CSS file:
+4. **Update CSS (if needed)**
+   If you make changes to the Tailwind CSS styles, rebuild the `output.css` file:
    ```bash
    npx tailwindcss -i ./src/assets/styles.css -o ./src/assets/output.css --watch
    ```
-   This ensures the latest styles are applied.
 
-## How to Contribute
-
-1. **Create a Branch**
-   Create a new branch for your feature or bug fix:
+5. **Work on Your Branch**
+   Switch to your assigned branch to work on your tasks:
    ```bash
-   git checkout -b feature/your-feature-name
+   git checkout branch-name
    ```
 
-2. **Make Your Changes**
-   Edit the code, add features, or fix bugs.
-
-3. **Commit Your Changes**
-   Commit your work with a meaningful message:
+6. **Push Changes**
+   After making your changes, commit and push them to the remote repository:
    ```bash
    git add .
-   git commit -m "Describe your changes"
+   git commit -m "Your commit message"
+   git push origin branch-name
    ```
 
-4. **Push Your Changes**
-   Push your branch to the remote repository:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-5. **Create a Pull Request**
-   Go to the GitHub repository and create a pull request to merge your changes into the `main` branch.
+7. **Create a Pull Request**
+   Once your changes are complete, create a pull request on GitHub to merge them into the main branch.
 
 ## Additional Notes
 
