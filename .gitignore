@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+
+# Tailwind CSS build output
+src/assets/output.css
+
+# Environment files
+.env
