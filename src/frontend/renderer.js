@@ -7,3 +7,6 @@ function signUp() {
 function goBack() {
   window.location.href = "../frontend/index.html";
 }
+function start(){
+  window.location.href = "../frontend/start.html";
+}

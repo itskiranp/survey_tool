@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Tool</title>
+  <link href="../assets/output.css" rel="stylesheet"> <!-- Link to Tailwind CSS -->
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+    <!-- Header Section -->
+    <h1 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">Survey: Individual Marital Supplement </h1>
+    <p class="text-gray-600 mb-6">Please answer the following questions carefully. Your responses will help us understand important aspects of marriage and family.</p>
+
+    <!-- Form Section -->
+    <form id="surveyForm" class="space-y-8">
+
+      <!-- Question A1 -->
+      <div class="flex items-start">
+        <span class="text-lg font-semibold text-gray-700 mr-4">A1:</span>
+        <div class="flex-1">
+          <label class="block text-lg font-medium text-gray-700">Have you married more than once?</label>
+          <div class="mt-4 flex flex-col space-y-3">
+            <label class="flex items-center">
+              <input type="radio" name="A1" value="1" class="form-radio text-blue-600 h-4 w-4 mr-3">
+              <span>Yes</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="A1" value="5" class="form-radio text-blue-600 h-4 w-4 mr-3">
+              <span>No</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question A2 -->
+      <div class="flex items-start">
+        <span class="text-lg font-semibold text-gray-700 mr-4">A2:</span>
+        <div class="flex-1">
+          <label class="block text-lg font-medium text-gray-700">Who selected your first spouse?</label>
+          <div class="mt-4 flex flex-col space-y-3">
+            <label class="flex items-center">
+              <input type="radio" name="A2" value="1" class="form-radio text-blue-600 h-4 w-4 mr-3" onclick="skipLogic()">
+              <span>Parents/Relatives</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="A2" value="2" class="form-radio text-blue-600 h-4 w-4 mr-3" onclick="skipLogic()">
+              <span>Myself</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="A2" value="3" class="form-radio text-blue-600 h-4 w-4 mr-3" onclick="skipLogic()">
+              <span>Both</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question A3 -->
+      <div class="flex items-start">
+        
+      <div id="questionA3">
+        <span class="text-lg font-semibold text-gray-700 mr-4">A3:</span>
+        <div class="flex-1">
+          <label class="block text-lg font-medium text-gray-700">Who had more influence in choosing your first spouse?</label>
+          <div class="mt-4 flex flex-col space-y-3">
+            <label class="flex items-center">
+              <input type="radio" name="A3" value="-1" class="form-radio text-blue-600 h-4 w-4 mr-3">
+              <span>Inappropriate</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="A3" value="1" class="form-radio text-blue-600 h-4 w-4 mr-3">
+              <span>Parents/Relatives</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="A3" value="2" class="form-radio text-blue-600 h-4 w-4 mr-3">
+              <span>Myself</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="A3" value="3" class="form-radio text-blue-600 h-4 w-4 mr-3">
+              <span>Equally</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Question A4 -->
+      <div class="flex items-start">
+        <span class="text-lg font-semibold text-gray-700 mr-4">A4:</span>
+        <div class="flex-1">
+          <label class="block text-lg font-medium text-gray-700">Did somebody other than your family members help you?</label>
+          <div class="mt-4 flex flex-col space-y-3">
+            <label class="flex items-center">
+              <input type="radio" name="A4" value="1" class="form-radio text-blue-600 h-4 w-4 mr-3">
+              <span>Yes</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="A4" value="5" class="form-radio text-blue-600 h-4 w-4 mr-3">
+              <span>No</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button type="submit" class="w-full bg-blue-600 text-white text-lg font-medium px-4 py-3 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300">
+          Submit Survey
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function skipLogic() {
+      // Get the selected value for A2
+      const selectedA2 = document.querySelector('input[name="A2"]:checked')?.value;
+
+      // Hide A3 if "Parents/Relatives" (1) or "Myself" (2) is selected
+      const questionA3 = document.getElementById('questionA3');
+      if (selectedA2 === "1" || selectedA2 === "2") {
+        questionA3.style.display = "none";
+      } else {
+        questionA3.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
