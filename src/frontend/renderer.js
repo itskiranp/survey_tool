@@ -14,5 +14,8 @@ function Back() {
   window.location.href = "../frontend/start.html";
 }
 function redirectToNextPage() {
+  window.location.href = "../frontend/next.html";
+}
+function redirectToNextonePage() {
   window.location.href = "../frontend/next1.html";
 }
