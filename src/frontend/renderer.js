@@ -10,3 +10,6 @@ function goBack() {
 function start(){
   window.location.href = "../frontend/start.html";
 }
+function Back() {
+  window.location.href = "../frontend/start.html";
+}

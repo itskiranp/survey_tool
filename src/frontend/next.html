@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Tool</title>
+  <link href="../assets/output.css" rel="stylesheet"> <!-- Link to Tailwind CSS -->
+</head>
+
+<body class="bg-gray-100 flex justify-between  min-h-screen">
+  <!-- Fixed Header Section -->
+  <!-- <header class="bg-blue-900 text-white fixed top-0 w-full shadow-md z-10 p-4 flex justify-between items-center">
+    <span class="text-lg font-bold">Survey Tool</span>
+  </header> -->
+
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <!-- Header Section -->
+    <span> <button onclick="Back()" class="bg-blue-900 text-white px-4 py-2 rounded flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        </svg>
+        Back
+      </button></span>
+
+    <!-- Form Section -->
+    <form id="surveyForm" class="space-y-8">
+
+      <!-- Question A5 -->
+      <div class="flex items-start">
+        <span class="text-lg font-semibold text-gray-700 mr-4">A5:</span>
+        <div class="flex-1">
+          <label class="block text-lg font-medium text-gray-700">Did you know you first spouse before the talk of your marriage began?</label>
+          <div class="mt-4 flex flex-col space-y-3">
+            <label class="flex items-center">
+              <input type="radio" name="A1" value="1" class="form-radio text-blue-600 h-4 w-4 mr-3">
+              <span>Yes</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="A5" value="5" class="form-radio text-blue-600 h-4 w-4 mr-3">
+              <span>No</span><span>(Skip to A7:)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+       <!-- Question A6 -->
+       <div>
+        <label class="block text-lg font-semibold text-gray-700 mb-4">
+          A6: How did you meet your first spouse before the talk of your marriage began?
+        </label>
+        <div class="space-y-2">
+          <label class="flex items-center">
+            <input type="radio" name="A6" value="-1" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Inappropriate</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6" value="1" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>School</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6" value="2" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Work</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6" value="3" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Market/Fair/Hat bazaar</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6" value="4" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Movie Hall</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6" value="5" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Working on a Farm</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6" value="6" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Grazing animals</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6" value="7" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Visiting Relatives</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6" value="8" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Lived in the same neighborhood</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6" value="97" class="form-radio text-blue-600 h-4 w-4 mr-3" onclick="toggleOtherField('A6_other', true)">
+            <input type="text" id="A6_other" name="A6_other" placeholder="Other, Please specify..."
+            class="hidden border border-gray-300 rounded-lg p-2 mt-2 w-full">
+          </label>
+        
+        </div>
+      </div>
+
+       <!-- Question A6a -->
+       <div>
+        <label class="block text-lg font-semibold text-gray-700 mb-4">
+          A6a: How did you meet? - Others
+        </label>
+        <div class="space-y-2">
+          <label class="flex items-center">
+            <input type="radio" name="A6a" value="-1" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Inappropriate</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6a" value="1" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Email/Facebook/Internet</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6a" value="2" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Home</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6a" value="3" class="form-radio text-blue-600 h-4 w-4 mr-3">
+            <span>Relatives/Friend's home</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A6a" value="97" class="form-radio text-blue-600 h-4 w-4 mr-3" onclick="toggleOtherField('A6a_other', true)">
+            <span>Other, please specify</span>
+          </label>
+          <input type="text" id="A6a_other" name="A6a_other" placeholder="Please specify..."
+            class="hidden border border-gray-300 rounded-lg p-2 mt-2 w-full">
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-lg font-semibold text-gray-700 mb-4">
+          A7: Was your first marriage to someone who was in your own caste or not?
+        </label>
+        <div class="space-y-2">
+          <label class="flex items-center">
+            <input type="radio" name="A7" value="missing" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>Missing (not interviewed this question on 2008 BL)</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A7" value="yes" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>Yes</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A7" value="no" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>No</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question A8 -->
+      <div>
+        <label class="block text-lg font-semibold text-gray-700 mb-4">
+          A8: Had your parents’ family and the parents of your first spouse ever lived in the same village?
+        </label>
+        <div class="space-y-2">
+          <label class="flex items-center">
+            <input type="radio" name="A8" value="missing" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>Missing (not interviewed this question on 2008 BL)</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A8" value="yes" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>Yes</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A8" value="no" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>No</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question A9 -->
+      <div>
+        <label class="block text-lg font-semibold text-gray-700 mb-4">
+          A9: At the time of your (first) marriage, did your parents’ family give anything such as food, clothing, money
+          or similar other things like presents or dowry to your spouse’s family?
+        </label>
+        <div class="space-y-2">
+          <label class="flex items-center">
+            <input type="radio" name="A9" value="missing" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>Missing (not interviewed this question on 2008 BL)</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A9" value="yes" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>Yes</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A9" value="no" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>No</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question A10 -->
+      <div>
+        <label class="block text-lg font-semibold text-gray-700 mb-4">
+          A10: At the time of your (first) marriage did your parents give you things like clothing, ornaments, land,
+          money or any other things that belong to you even after you got married (as pewa)?
+        </label>
+        <div class="space-y-2">
+          <label class="flex items-center">
+            <input type="radio" name="A10" value="missing" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>Missing (not interviewed this question on 2008 BL)</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A10" value="yes" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>Yes</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="A10" value="no" class="form-radio text-blue-600 h-5 w-5 mr-3">
+            <span>No</span>
+          </label>
+        </div>
+      </div>
+
+
+      <!-- Submit Button -->
+
+      <div class="text-start">
+        <button type="button" class="btn-next" onclick="redirectToNextPage()">Next</button>
+      </div>
+    </form>
+  </div>
+
+  </form>
+  </div>
+  </div>
+
+  <script>
+    function skipLogic() {
+      // Get the selected value for A2
+      const selectedA2 = document.querySelector('input[name="A2"]:checked')?.value;
+
+      // Hide A3 if "Parents/Relatives" (1) or "Myself" (2) is selected
+      const questionA3 = document.getElementById('questionA3');
+      if (selectedA2 === "1" || selectedA2 === "2") {
+        questionA3.style.display = "none";
+      } else {
+        questionA3.style.display = "block";
+      }
+    }
+  </script>
+  <script>
+    function toggleOtherField(fieldId, show) {
+      const field = document.getElementById(fieldId);
+      field.classList.toggle('hidden', !show);
+    }
+  </script>
+  <script>
+    function redirectToNextPage() {
+      // Replace 'next-page.html' with the actual path to your next page
+      window.location.href = "../frontend/next1.html";
+    }
+  </script>
+  <script src="../frontend/renderer.js"></script>
+  </div>  
+</body>
+
+</html>

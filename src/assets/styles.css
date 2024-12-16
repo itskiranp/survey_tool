@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* General Styles */
 * {
@@ -10,7 +13,6 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -25,10 +27,10 @@ body {
     width: 100%;
     background-color: #003262;
     color: white;
-    padding: 10px 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between; /* Align logo left and buttons right */
     align-items: center;
+    padding: 10px 20px;
   }
   
   .header button {
@@ -41,6 +43,29 @@ body {
     border-radius: 5px;
     font-size: 14px;
   }
+  .logo {
+    height: 60px; /* Adjust the logo size */
+    width: auto;  /* Maintain aspect ratio */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons button {
+    background-color: white;
+    color: #003262;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.nav-buttons button:hover {
+    background-color: #ccc;
+}
   
   .header button:hover {
     background-color: #ccc;
@@ -50,4 +75,21 @@ body {
     margin-top: 50px;
     color: #003262;
   }
-  
+  .btn-next {
+    background-color: #1d4ed8; /* Tailwind bg-blue-700 */
+    color: white; /* Text color */
+    padding: 0.5rem 1.5rem; /* Adjust padding */
+    border: none; /* Remove border */
+    border-radius: 0.375rem; /* Rounded edges */
+    font-size: 1rem; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor */
+    display: inline-block; /* Inline-block */
+    margin-top: 1rem; /* Spacing above button */
+}
+
+.btn-next:hover {
+    background-color: #1e40af; /* Darker shade on hover (Tailwind bg-blue-800) */
+}
+.hidden {
+  display: none;
+}

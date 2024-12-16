@@ -4,7 +4,7 @@
     "main": "main.js",
     "scripts": {
         "start": "electron .",
-        "build:css": "npx tailwindcss -i ./src/assets/styles.css -o ./src/assets/output.css --watch"
+        "build": "npx tailwindcss -i ./src/assets/styles.css -o ./src/assets/output.css --watch"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.20",

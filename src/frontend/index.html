@@ -7,13 +7,27 @@
   <link href="../assets/output.css" rel="stylesheet">
 
 </head>
-<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
-  <header class="absolute top-0 w-full flex justify-end bg-blue-900 text-white p-4">
+<body class="bg-gray-100 flex items-stretch ... min-h-screen">
+  <header class="header grid grid-flow-col justify-stretch ...">
+    <span><img src="../assets/isernepal-at-iser.png" alt="Logo" class="logo"> </span>
+    <div class="nav-buttons flex flex-row-reverse space-x-4 space-x-reverse">
+      <button onclick="logIn()">Log In</button>
+      <button onclick="signUp()">Sign Up</button>
+      <button onclick="start()">Start Survey</button>
+    </div>
+  </header>
+  
+
+  <!-- <header class="absolute top-0 w-full flex items-center justify-between bg-blue-900 text-white p-4">
+    <div class="flex items-center ">
+      <img src="../assets/isernepal-at-iser.png" alt="Institution Logo" class="logo"> 
+      
+    </div>
     <button onclick="logIn()" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-200 mr-2">Log In</button>
     <button onclick="signUp()" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-200 mr-2">Sign Up</button>
     <button onclick="start()" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-200 ">Start Survey</button>
 
-  </header>
+  </header> -->
   <h1 class="text-4xl font-bold text-blue-900 mb-6">Welcome to Aging Project Survey App</h1>
   <script src="../frontend/renderer.js"></script>
 </body>
