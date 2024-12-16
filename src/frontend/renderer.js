@@ -13,3 +13,6 @@ function start(){
 function Back() {
   window.location.href = "../frontend/start.html";
 }
+function redirectToNextPage() {
+  window.location.href = "../frontend/next1.html";
+}
