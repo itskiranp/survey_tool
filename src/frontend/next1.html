@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  <link href="../assets/output.css" rel="stylesheet"> <!-- Link to Tailwind CSS -->
+
 </head>
-<body>
+<body class="bg-gray-100 flex justify-between  min-h-screen">
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+
    <!-- Back button inside the form container -->
-   <button onclick="goBack()" class="bg-blue-900 text-white px-4 py-2 rounded flex items-center">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 00-1 1v2H7a1 1 0 100 2h3v2a1 1 0 102 0v-2h3a1 1 0 100-2h-3V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-    </svg>
+    <span>
+   <button onclick="goBack()" class="bg-blue-900 text-white px-4 py-2 rounded flex items-top">
     Home
   </button>
+</span>
     <h1>next next page...</h1>
   <script src="../frontend/renderer.js"></script>
+  </div>
 
-</body>
+</body> 
 </html>
